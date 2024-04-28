@@ -14,8 +14,8 @@
     <menus>
       <Menu text="Menú">
         <items>
-          <MenuItem text="Afegir dades" onAction="#addDataAction"/>
-          <MenuItem text="Veure estadístiques" onAction="#viewStatsAction"/>
+          <MenuItem text="Afegir dades" />
+          <MenuItem text="Veure estadístiques" />
         </items>
       </Menu>
     </menus>
