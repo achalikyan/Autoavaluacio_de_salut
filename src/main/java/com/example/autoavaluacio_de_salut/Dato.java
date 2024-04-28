@@ -42,7 +42,6 @@ public class Dato {
         this.fecha = Calendar.getInstance().getTime();
     }
 
-
     @Override
     public String toString() {
         return "Dato{" +

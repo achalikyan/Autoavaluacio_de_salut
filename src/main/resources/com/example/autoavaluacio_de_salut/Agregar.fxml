@@ -48,16 +48,23 @@
                </items>
             </ComboBox>
 
-            <CheckBox mnemonicParsing="false" text="Leche" />
-            <CheckBox mnemonicParsing="false" text="Cereales" />
-            <CheckBox mnemonicParsing="false" text="Leche" />
-            <CheckBox mnemonicParsing="false" text="Cereales" />
-            <CheckBox layoutX="10.0" layoutY="135.0" mnemonicParsing="false" text="Pasta" />
-            <CheckBox layoutX="10.0" layoutY="152.0" mnemonicParsing="false" text="Fruta" />
-            <CheckBox layoutX="10.0" layoutY="169.0" mnemonicParsing="false" text="Vegetales" />
-            <CheckBox layoutX="10.0" layoutY="186.0" mnemonicParsing="false" text="Legumbres" />
-            <CheckBox layoutX="10.0" layoutY="203.0" mnemonicParsing="false" text="Agua" />
-            <CheckBox layoutX="10.0" layoutY="220.0" mnemonicParsing="false" text="Zumo" />
+            <CheckBox fx:id="checkBoxLeche" mnemonicParsing="false" text="Leche" />
+
+            <CheckBox fx:id="checkBoxCereales" mnemonicParsing="false" text="Cereales" />
+
+            <CheckBox fx:id="checkBoxPasta" mnemonicParsing="false" text="Pasta" />
+
+            <CheckBox fx:id="checkBoxFruta" mnemonicParsing="false" text="Fruta" />
+
+            <CheckBox fx:id="checkBoxVegetales" mnemonicParsing="false" text="Vegetales" />
+
+            <CheckBox fx:id="checkBoxLegumbres" mnemonicParsing="false" text="Legumbres" />
+
+            <CheckBox fx:id="checkBoxAgua" mnemonicParsing="false" text="Agua" />
+
+            <CheckBox fx:id="checkBoxAlcohol" mnemonicParsing="false" text="Alcohol" />
+
+            <CheckBox fx:id="checkBoxZumo" mnemonicParsing="false" text="Zumo" />
 
             <ComboBox fx:id="Fase_del_dia" promptText="Fase del dia">
                <items>

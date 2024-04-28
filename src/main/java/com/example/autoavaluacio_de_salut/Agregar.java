@@ -9,15 +9,16 @@ import javafx.scene.control.SplitMenuButton;
 
 public class Agregar {
 
-    @FXML private CheckBox lecheCheckbox;
-    @FXML private CheckBox cerealesCheckbox;
-    @FXML private CheckBox pastaCheckbox;
-    @FXML private CheckBox frutaCheckbox;
-    @FXML private CheckBox vegetalesCheckbox;
-    @FXML private CheckBox legumbresCheckbox;
-    @FXML private CheckBox aguaCheckbox;
-    @FXML private CheckBox zumoCheckbox;
 
+    public CheckBox checkBoxLeche;
+    public CheckBox checkBoxCereales;
+    public CheckBox checkBoxPasta;
+    public CheckBox checkBoxFruta;
+    public CheckBox checkBoxVegetales;
+    public CheckBox checkBoxLegumbres;
+    public CheckBox checkBoxAgua;
+    public CheckBox checkBoxAlcohol;
+    public CheckBox checkBoxZumo;
     @FXML private ComboBox<Integer> estado_de_animo;
     @FXML private ComboBox<Integer> estado_fisico;
     @FXML private ComboBox<String> Fase_del_dia;
@@ -32,17 +33,18 @@ public class Agregar {
         int estadoDeAnimoValue = (int) estado_de_animo.getValue();
         int estadoFisicoValue = (int) estado_fisico.getValue();
         String faseDelDiaValue = (String) Fase_del_dia.getValue();
-        boolean lleit = lecheCheckbox.isSelected();
-        boolean cereals = cerealesCheckbox.isSelected();
-        boolean pasta = pastaCheckbox.isSelected();
-        boolean fruta = frutaCheckbox.isSelected();
-        boolean vegetals = vegetalesCheckbox.isSelected();
-        boolean llegums = legumbresCheckbox.isSelected();
-        boolean aigua = aguaCheckbox.isSelected();
-        boolean alcohol = zumoCheckbox.isSelected();
-        boolean sucs = zumoCheckbox.isSelected();
+
+        boolean lleit = checkBoxLeche.isSelected();
+        boolean cereals = checkBoxCereales.isSelected();
+        boolean pasta = checkBoxPasta.isSelected();
+        boolean fruta = checkBoxFruta.isSelected();
+        boolean vegetals = checkBoxVegetales.isSelected();
+        boolean llegums = checkBoxLegumbres.isSelected();
+        boolean aigua = checkBoxAgua.isSelected();
+        boolean alcohol = checkBoxAlcohol.isSelected();
+        boolean sucs = checkBoxZumo.isSelected();
 
         Dato dato = new Dato(estadoDeAnimoValue,estadoFisicoValue,lleit,cereals,pasta,fruta,vegetals,llegums,aigua,alcohol,sucs,faseDelDiaValue);
-        System.out.print(dato);
+
     }
 }
