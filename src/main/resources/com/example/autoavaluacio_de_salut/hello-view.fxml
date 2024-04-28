@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.autoavaluacio_de_salut.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.autoavaluacio_de_salut.HelloController"
+      prefHeight="240" prefWidth="320">
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+  <MenuBar>
+    <menus>
+      <Menu text="Menú">
+        <items>
+          <MenuItem text="Afegir dades" onAction="#addDataAction"/>
+          <MenuItem text="Veure estadístiques" onAction="#viewStatsAction"/>
+        </items>
+      </Menu>
+    </menus>
+  </MenuBar>
+
+  <!-- Aquí puedes incluir otros elementos de la interfaz de usuario -->
+
 </VBox>

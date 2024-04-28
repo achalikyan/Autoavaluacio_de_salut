@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.autoavaluacio_de_salut.HelloController"
+      prefHeight="200" prefWidth="300">
+
+    <MenuBar>
+        <menus>
+            <Menu text="Menú">
+                <items>
+                    <MenuItem fx:id="addItem" text="Afegir dades" onAction="#addDataAction"/>
+                    <MenuItem fx:id="statsItem" text="Veure estadístiques" onAction="#viewStatsAction"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+
+</VBox>
