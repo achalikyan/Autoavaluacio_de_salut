@@ -26,7 +26,7 @@ public class Dato {
     public Dato() {
     }
 
-    public Dato(int estado_de_animo, int estado_fisico, boolean lleit, boolean cereals, boolean pasta, boolean fruta, boolean vegetals, boolean llegums, boolean aigua, boolean alcohol, boolean sucs, String fase_del_dia, Date fecha) {
+    public Dato(int estado_de_animo, int estado_fisico, boolean lleit, boolean cereals, boolean pasta, boolean fruta, boolean vegetals, boolean llegums, boolean aigua, boolean alcohol, boolean sucs, String fase_del_dia) {
         this.estado_de_animo = estado_de_animo;
         this.estado_fisico = estado_fisico;
         this.lleit = lleit;
@@ -43,4 +43,22 @@ public class Dato {
     }
 
 
+    @Override
+    public String toString() {
+        return "Dato{" +
+                "estado_de_animo=" + estado_de_animo +
+                ", estado_fisico=" + estado_fisico +
+                ", lleit=" + lleit +
+                ", cereals=" + cereals +
+                ", pasta=" + pasta +
+                ", fruta=" + fruta +
+                ", vegetals=" + vegetals +
+                ", llegums=" + llegums +
+                ", aigua=" + aigua +
+                ", alcohol=" + alcohol +
+                ", sucs=" + sucs +
+                ", fase_del_dia='" + fase_del_dia + '\'' +
+                ", fecha=" + fecha +
+                '}';
+    }
 }
