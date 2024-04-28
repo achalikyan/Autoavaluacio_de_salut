@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autoavaluacio_de_salut.Agregar">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="58.0" prefWidth="600.0" text="Rellene los datos:">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <SplitMenuButton mnemonicParsing="false" text="Estado de animo">
+              <items>
+                <MenuItem mnemonicParsing="false" text="1" />
+                <MenuItem mnemonicParsing="false" text="2" />
+                <MenuItem mnemonicParsing="false" text="3" />
+                <MenuItem mnemonicParsing="false" text="4" />
+                <MenuItem mnemonicParsing="false" text="5" />
+              </items>
+            </SplitMenuButton>
+            <SplitMenuButton mnemonicParsing="false" text="Estado fisico">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="1" />
+                  <MenuItem mnemonicParsing="false" text="2" />
+                  <MenuItem mnemonicParsing="false" text="3" />
+                  <MenuItem mnemonicParsing="false" text="4" />
+                  <MenuItem mnemonicParsing="false" text="5" />
+               </items>
+            </SplitMenuButton>
+            <CheckBox mnemonicParsing="false" text="Leche" />
+            <CheckBox mnemonicParsing="false" text="Cereales" />
+            <CheckBox layoutX="10.0" layoutY="135.0" mnemonicParsing="false" text="Pasta" />
+            <CheckBox layoutX="10.0" layoutY="152.0" mnemonicParsing="false" text="Fruta" />
+            <CheckBox layoutX="10.0" layoutY="169.0" mnemonicParsing="false" text="Vegetales" />
+            <CheckBox layoutX="10.0" layoutY="186.0" mnemonicParsing="false" text="Legumbres" />
+            <CheckBox layoutX="10.0" layoutY="203.0" mnemonicParsing="false" text="Agua" />
+            <CheckBox layoutX="10.0" layoutY="220.0" mnemonicParsing="false" text="Zumo" />
+            <SplitMenuButton layoutX="10.0" layoutY="93.0" mnemonicParsing="false" text="Estado fisico">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Dia" />
+                  <MenuItem mnemonicParsing="false" text="Noche" />
+               </items>
+            </SplitMenuButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
