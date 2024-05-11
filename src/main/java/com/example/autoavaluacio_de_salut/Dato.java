@@ -1,11 +1,12 @@
 package com.example.autoavaluacio_de_salut;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Dato {
+public class Dato implements Serializable {
 
     int estado_de_animo;
     int estado_fisico;

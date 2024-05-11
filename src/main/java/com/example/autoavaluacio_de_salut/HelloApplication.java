@@ -9,8 +9,6 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
 
-    int test = 343;
-
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Menu.fxml"));

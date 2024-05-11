@@ -7,6 +7,11 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
 public class Agregar {
 
 
@@ -44,7 +49,19 @@ public class Agregar {
         boolean alcohol = checkBoxAlcohol.isSelected();
         boolean sucs = checkBoxZumo.isSelected();
 
-        Dato dato = new Dato(estadoDeAnimoValue,estadoFisicoValue,lleit,cereals,pasta,fruta,vegetals,llegums,aigua,alcohol,sucs,faseDelDiaValue);
+        Dato dato = new Dato(estadoDeAnimoValue, estadoFisicoValue, lleit, cereals, pasta, fruta, vegetals, llegums, aigua, alcohol, sucs, faseDelDiaValue);
 
+        guardarObjeto(dato);
     }
+
+    public static void guardarObjeto(Dato dato) {
+        try (FileOutputStream fileOut = new FileOutputStream(".//datos.txt", true);
+             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
+            objectOut.writeObject(dato);
+            System.out.println("Objeto Dato guardado correctamente en " + ".//datos.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
