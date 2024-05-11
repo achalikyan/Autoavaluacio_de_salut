@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Estadistiques {
     private int cantidadDias;
@@ -17,30 +18,10 @@ public class Estadistiques {
     private int diasMejorEstadoAnimo;
     private int diasMejorEstadoFisico;
 
-    ArrayList<Dato> datos;
-    public void cargarObjetos() {
-        try (FileInputStream fileIn = new FileInputStream(".//datos.txt");
-             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
-            Object objeto;
-            while ((objeto = objectIn.readObject()) != null) {
-                // Verificar si el objeto es de tipo Dato
-                if (objeto instanceof Dato) {
-                    // Procesar el objeto Dato leído
-                    Dato dato = (Dato) objeto;
-                    datos.add(dato);
-                }
-            }
-        } catch (EOFException e) {
-            // Fin del archivo
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
+    List<Dato> datos;
 
     public Estadistiques() {
-        datos = new ArrayList<Dato>();
-        cargarObjetos();
+        datos = cargarObjetos();
     }
 
     public int getCantidadDias() {
@@ -76,4 +57,21 @@ public class Estadistiques {
         return diasMejorEstadoFisico;
     }
 
+
+    public static List<Dato> cargarObjetos() {
+        List<Dato> listaDatos = new ArrayList<>();
+        try (FileInputStream fileIn = new FileInputStream(".//datos.txt");
+             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
+            Object objeto = objectIn.readObject();
+            // Verificar si el objeto es una lista de Dato
+            if (objeto instanceof List) {
+                listaDatos = (List<Dato>) objeto;
+            }
+        } catch (EOFException e) {
+            // Fin del archivo
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return listaDatos;
+    }
 }

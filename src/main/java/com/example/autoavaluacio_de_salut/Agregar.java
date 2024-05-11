@@ -7,10 +7,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Agregar {
 
@@ -55,13 +54,32 @@ public class Agregar {
     }
 
     public static void guardarObjeto(Dato dato) {
-        try (FileOutputStream fileOut = new FileOutputStream(".//datos.txt", true);
+        List listaDatos = cargarObjetos();
+        listaDatos.add(dato);
+        try (FileOutputStream fileOut = new FileOutputStream(".//datos.txt");
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
-            objectOut.writeObject(dato);
-            System.out.println("Objeto Dato guardado correctamente en " + ".//datos.txt");
+            objectOut.writeObject(listaDatos);
+            System.out.println("Objetos Dato guardados correctamente en " + ".//datos.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static List<Dato> cargarObjetos() {
+        List<Dato> listaDatos = new ArrayList<>();
+        try (FileInputStream fileIn = new FileInputStream(".//datos.txt");
+             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
+            Object objeto = objectIn.readObject();
+            // Verificar si el objeto es una lista de Dato
+            if (objeto instanceof List) {
+                listaDatos = (List<Dato>) objeto;
+            }
+        } catch (EOFException e) {
+            // Fin del archivo
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return listaDatos;
     }
 
 }
