@@ -82,29 +82,64 @@ public class Estadistiques {
             sucs += bool_parse(dato.sucs);
         }
 
+        if (cereals == 0){
+            cereals = -100;
+        }
+        if (pasta == 0){
+            pasta = -100;
+        }
+        if (fruta == 0){
+            fruta = -100;
+        }
+        if (vegetals == 0){
+            vegetals = -100;
+        }
+        if (llegums == 0){
+            llegums = -100;
+        }
+
+        if (lleit == 0){
+            lleit = -100;
+        }
+        if (aigua == 0){
+            aigua = -100;
+        }
+        if (alcohol == 0){
+            alcohol = -100;
+        }
+        if (sucs == 0){
+            sucs = -100;
+        }
+
         if(lleit >= aigua && lleit >= alcohol && lleit >= sucs){
-            liquido_mas_consumida = "lleit";
+            liquido_mas_consumida = "Lleit";
         }else if(aigua >= lleit && aigua >= alcohol && aigua >= sucs){
-            liquido_mas_consumida = "aigua";
+            liquido_mas_consumida = "Aigua";
         }else if(alcohol >= aigua && alcohol >= sucs){
-            liquido_mas_consumida = "alcohol";
-        }else{
-            liquido_mas_consumida = "sucs";
+            liquido_mas_consumida = "Alcohol";
+        }else if (sucs >= aigua && sucs >= alcohol){
+            liquido_mas_consumida = "Sucs";
+        }
+        if (lleit + aigua + alcohol + sucs == -400){
+            liquido_mas_consumida = "null";
         }
 
         if(cereals >= pasta && cereals >= fruta && cereals >= vegetals && cereals >= llegums){
-            comida_mas_consumida = "cereals";
+            comida_mas_consumida = "Cereals";
         } else if (pasta >= cereals && pasta >= fruta && pasta >= vegetals && pasta >= llegums) {
-            comida_mas_consumida = "pasta";
+            comida_mas_consumida = "Pasta";
         } else if (fruta >= cereals && fruta >= pasta && fruta >= vegetals && fruta >= llegums) {
-            comida_mas_consumida = "fruta";
+            comida_mas_consumida = "Fruta";
         } else if (vegetals >= cereals && vegetals >= pasta && vegetals >= fruta && vegetals >= llegums) {
-            comida_mas_consumida = "vegetals";
-        } else{
-            comida_mas_consumida = "llegums";
+            comida_mas_consumida = "Vegetals";
+        } else if (llegums >= fruta){
+            comida_mas_consumida = "Llegums";
+        }
+        if (cereals + pasta + fruta + vegetals + llegums == -500){
+            comida_mas_consumida = "null";
         }
 
-        return comida_mas_consumida + " : " + liquido_mas_consumida;
+        return comida_mas_consumida + " y " + liquido_mas_consumida;
     }
 
     public String getDiasMejorEstadoAnimo() {
