@@ -10,7 +10,6 @@ public class Dato implements Serializable {
 
     int estado_de_animo;
     int estado_fisico;
-
     boolean lleit;
     boolean cereals;
     boolean pasta;
