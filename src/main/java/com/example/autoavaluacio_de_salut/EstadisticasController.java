@@ -30,7 +30,7 @@ public class EstadisticasController {
     private Label diasMejorEstadoFisicoLabel;
 
     private Estadistiques estadisticas; // Suponiendo que tengas un objeto Estadisticas
-    ArrayList<Dato> datos = new ArrayList<Dato>();
+
 
 
     // Método para inicializar los datos de las estadísticas
@@ -49,25 +49,4 @@ public class EstadisticasController {
         diasMejorEstadoFisicoLabel.setText("Dies amb millor estat físic: " + estadisticas.getDiasMejorEstadoFisico());
     }
 
-
-
-
-    public void cargarObjetos() {
-        try (FileInputStream fileIn = new FileInputStream(".//datos.txt");
-             ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
-            Object objeto;
-            while ((objeto = objectIn.readObject()) != null) {
-                // Verificar si el objeto es de tipo Dato
-                if (objeto instanceof Dato) {
-                    // Procesar el objeto Dato leído
-                    Dato dato = (Dato) objeto;
-                    datos.add(dato);
-                }
-            }
-        } catch (EOFException e) {
-            // Fin del archivo
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 }
