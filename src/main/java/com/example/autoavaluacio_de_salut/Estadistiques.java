@@ -208,7 +208,7 @@ public class Estadistiques {
 
     public static int bool_parse(boolean bool) {
         int res = 0;
-        if (bool == true) {
+        if (bool) {
             res = 1;
         }
         return res;
