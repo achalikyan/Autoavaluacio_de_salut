@@ -25,7 +25,7 @@
                </font>
             </Label>
 
-            <ComboBox fx:id="estado_de_animo" promptText="Estado de enimo">
+            <ComboBox fx:id="estado_de_animo" promptText="Estado de animo">
                <items>
                   <FXCollections fx:factory="observableArrayList">
                      <Integer fx:value="1" />

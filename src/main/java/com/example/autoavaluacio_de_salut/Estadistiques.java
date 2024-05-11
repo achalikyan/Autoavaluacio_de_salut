@@ -49,13 +49,50 @@ public class Estadistiques {
         return comidaBebidaMasConsumida;
     }
 
-    public int getDiasMejorEstadoAnimo() {
-        return diasMejorEstadoAnimo;
+    public String getDiasMejorEstadoAnimo() {
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        List<String> fechasFormateadas = new ArrayList<>();
+        for (int i = 0;i < datos.size();i++) {
+            if (datos.get(i).estado_de_animo >= 4) {
+                String fechaFormateada = formato.format(datos.get(i).fecha);
+                fechasFormateadas.add(fechaFormateada);
+            }
+        }
+
+        // Convertir la lista de cadenas a un array de cadenas
+        String fechasConcatenadasanimo = String.join(", ", fechasFormateadas);
+
+        // Imprimir las fechas (opcional)
+        for (String fecha : fechasFormateadas) {
+            System.out.println(fecha);
+        }
+
+        // Devolver la cadena de fechas concatenadas
+        return fechasConcatenadasanimo;
     }
 
 
-    public int getDiasMejorEstadoFisico() {
-        return diasMejorEstadoFisico;
+    public String getDiasMejorEstadoFisico() {
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        List<String> fechasFormateadas = new ArrayList<>();
+        for (int i = 0;i < datos.size();i++) {
+            if (datos.get(i).estado_fisico >= 4) {
+                String fechaFormateada = formato.format(datos.get(i).fecha);
+                fechasFormateadas.add(fechaFormateada);
+            }
+        }
+
+        // Convertir la lista de cadenas a un array de cadenas
+        String fechasConcatenadas = String.join(", ", fechasFormateadas);
+
+        // Imprimir las fechas (opcional)
+        for (String fecha : fechasFormateadas) {
+            System.out.println(fecha);
+        }
+
+        // Devolver la cadena de fechas concatenadas
+        return fechasConcatenadas;
+
     }
 
 
