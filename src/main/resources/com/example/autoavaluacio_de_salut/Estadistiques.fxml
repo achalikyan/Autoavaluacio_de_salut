@@ -8,17 +8,17 @@
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.autoavaluacio_de_salut.Estadistiques"
+      fx:controller="com.example.autoavaluacio_de_salut.EstadisticasController"
       prefHeight="400.0" prefWidth="600.0">
 
-    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Estadistiques" />
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Estadisticas" />
 
-    <Label text="Quantitat de dies introduïts" />
-    <Label text="Mitjana de l'estat d'ànim" />
-    <Label text="Mitjana de l'estat físic" />
-    <Label text="Menjar o beguda més consumida" />
-    <Label text="Dies amb millor estat d'ànim" />
-    <Label text="Dies amb millor estat físic" />
+    <Label fx:id="cantidadDiasLabel" />
+    <Label fx:id="mediaEstadoAnimoLabel" />
+    <Label fx:id="mediaEstadoFisicoLabel" />
+    <Label fx:id="comidaBebidaMasConsumidaLabel" />
+    <Label fx:id="diasMejorEstadoAnimoLabel" />
+    <Label fx:id="diasMejorEstadoFisicoLabel" />
 
 </VBox>
 

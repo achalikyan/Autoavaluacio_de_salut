@@ -31,7 +31,9 @@ public class EstadisticasController {
 
     private Estadistiques estadisticas = new Estadistiques(); // Suponiendo que tengas un objeto Estadisticas
 
-
+    public void initialize() {
+        actualizarEtiquetas();
+    }
 
     // Método para actualizar el texto de las etiquetas con los datos de estadísticas
     private void actualizarEtiquetas() {

@@ -6,12 +6,12 @@ import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Estadistiques {
-    private int cantidadDias;
     private double mediaEstadoAnimo;
     private double mediaEstadoFisico;
     private String comidaBebidaMasConsumida;
@@ -25,15 +25,16 @@ public class Estadistiques {
     }
 
     public int getCantidadDias() {
-        Date date = new Date();
+        String date = "00/00/0000";
         int dias = 0;
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         for(int i = 0;i < datos.size();i++){
-            if (datos.get(i).fecha != date){
-                date = datos.get(i).fecha;
+            if (!formato.format(datos.get(i).fecha).equals(date)){
+                date = formato.format(datos.get(i).fecha);
                 dias++;
             }
         }
-        return cantidadDias;
+        return dias;
     }
 
     public double getMediaEstadoAnimo() {
