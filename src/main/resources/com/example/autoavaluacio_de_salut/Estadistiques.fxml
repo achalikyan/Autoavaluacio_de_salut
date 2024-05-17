@@ -5,6 +5,7 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
@@ -20,5 +21,13 @@
     <Label fx:id="diasMejorEstadoAnimoLabel" />
     <Label fx:id="diasMejorEstadoFisicoLabel" />
 
-</VBox>
+    <BarChart fx:id="estadoAnimoChart">
+        <xAxis>
+            <CategoryAxis />
+        </xAxis>
+        <yAxis>
+            <NumberAxis />
+        </yAxis>
+    </BarChart>
 
+</VBox>
