@@ -17,15 +17,11 @@
 <?import java.lang.String?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autoavaluacio_de_salut.Agregar">
    <children>
-      <VBox prefHeight="400.0" prefWidth="600.0">
+      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ECEFF1; -fx-padding: 20px; -fx-spacing: 10px;">
          <children>
-            <Label prefHeight="58.0" prefWidth="600.0" text="Rellene los datos:">
-               <font>
-                  <Font size="40.0" />
-               </font>
-            </Label>
+            <Label prefHeight="58.0" prefWidth="600.0" text="Rellene los datos:" style="-fx-font-size: 40px; -fx-text-fill: #37474F;" />
 
-            <ComboBox fx:id="estado_de_animo" promptText="Estado de animo">
+            <ComboBox fx:id="estado_de_animo" promptText="Estado de ánimo" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #90A4AE;" >
                <items>
                   <FXCollections fx:factory="observableArrayList">
                      <Integer fx:value="1" />
@@ -36,7 +32,7 @@
                   </FXCollections>
                </items>
             </ComboBox>
-            <ComboBox fx:id="estado_fisico" promptText="Estado fisico">
+            <ComboBox fx:id="estado_fisico" promptText="Estado físico" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #90A4AE;">
                <items>
                   <FXCollections fx:factory="observableArrayList">
                      <Integer fx:value="1" />
@@ -48,38 +44,28 @@
                </items>
             </ComboBox>
 
-            <CheckBox fx:id="checkBoxLeche" mnemonicParsing="false" text="Leche" />
+            <!-- Checkboxes -->
+            <CheckBox fx:id="checkBoxLeche" mnemonicParsing="false" text="Leche" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+            <CheckBox fx:id="checkBoxCereales" mnemonicParsing="false" text="Cereales" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+            <CheckBox fx:id="checkBoxPasta" mnemonicParsing="false" text="Pasta" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+            <CheckBox fx:id="checkBoxFruta" mnemonicParsing="false" text="Fruta" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+            <CheckBox fx:id="checkBoxVegetales" mnemonicParsing="false" text="Vegetales" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+            <CheckBox fx:id="checkBoxLegumbres" mnemonicParsing="false" text="Legumbres" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+            <CheckBox fx:id="checkBoxAgua" mnemonicParsing="false" text="Agua" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+            <CheckBox fx:id="checkBoxAlcohol" mnemonicParsing="false" text="Alcohol" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+            <CheckBox fx:id="checkBoxZumo" mnemonicParsing="false" text="Zumo" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
 
-            <CheckBox fx:id="checkBoxCereales" mnemonicParsing="false" text="Cereales" />
-
-            <CheckBox fx:id="checkBoxPasta" mnemonicParsing="false" text="Pasta" />
-
-            <CheckBox fx:id="checkBoxFruta" mnemonicParsing="false" text="Fruta" />
-
-            <CheckBox fx:id="checkBoxVegetales" mnemonicParsing="false" text="Vegetales" />
-
-            <CheckBox fx:id="checkBoxLegumbres" mnemonicParsing="false" text="Legumbres" />
-
-            <CheckBox fx:id="checkBoxAgua" mnemonicParsing="false" text="Agua" />
-
-            <CheckBox fx:id="checkBoxAlcohol" mnemonicParsing="false" text="Alcohol" />
-
-            <CheckBox fx:id="checkBoxZumo" mnemonicParsing="false" text="Zumo" />
-
-            <ComboBox fx:id="Fase_del_dia" promptText="Fase del dia">
+            <ComboBox fx:id="Fase_del_dia" promptText="Fase del día" style="-fx-font-size: 16px; -fx-background-color: #FFFFFF; -fx-border-color: #90A4AE;">
                <items>
                   <FXCollections fx:factory="observableArrayList">
-                     <String fx:value="Dia" />
+                     <String fx:value="Día" />
                      <String fx:value="Noche" />
                   </FXCollections>
                </items>
             </ComboBox>
 
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="163.0" text="Guardar" onAction="#guardar_datos">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Button>
+            <!-- Botón -->
+            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="163.0" text="Guardar" onAction="#guardar_datos" style="-fx-font-size: 24px; -fx-background-color: #4CAF50; -fx-text-fill: white;" />
          </children>
       </VBox>
    </children>

@@ -10,18 +10,21 @@
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.autoavaluacio_de_salut.EstadisticasController"
-      prefHeight="400.0" prefWidth="600.0">
+      prefHeight="400.0" prefWidth="600.0"
+      style="-fx-background-color: #f4f4f4; -fx-padding: 20px; -fx-spacing: 10px;">
 
-    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Estadisticas" />
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Estadísticas" />
 
-    <Label fx:id="cantidadDiasLabel" />
-    <Label fx:id="mediaEstadoAnimoLabel" />
-    <Label fx:id="mediaEstadoFisicoLabel" />
-    <Label fx:id="comidaBebidaMasConsumidaLabel" />
-    <Label fx:id="diasMejorEstadoAnimoLabel" />
-    <Label fx:id="diasMejorEstadoFisicoLabel" />
+    <VBox style="-fx-spacing: 5px;">
+        <Label fx:id="cantidadDiasLabel" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+        <Label fx:id="mediaEstadoAnimoLabel" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+        <Label fx:id="mediaEstadoFisicoLabel" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+        <Label fx:id="comidaBebidaMasConsumidaLabel" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+        <Label fx:id="diasMejorEstadoAnimoLabel" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+        <Label fx:id="diasMejorEstadoFisicoLabel" style="-fx-font-size: 16px; -fx-text-fill: #37474F;" />
+    </VBox>
 
-    <BarChart fx:id="estadoAnimoChart">
+    <BarChart fx:id="estadoAnimoChart" style="-fx-background-color: #FFFFFF; -fx-border-color: #90A4AE; -fx-border-width: 1px;">
         <xAxis>
             <CategoryAxis />
         </xAxis>
