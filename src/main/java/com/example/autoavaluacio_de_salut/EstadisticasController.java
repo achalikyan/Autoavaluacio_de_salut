@@ -61,6 +61,7 @@ public class EstadisticasController {
 
 // Agregar la serie de datos al gráfico
         estadoAnimoChart.getData().add(dataSeries);
+
     }
 
     // Método para obtener la cantidad de días por cada estado de ánimo

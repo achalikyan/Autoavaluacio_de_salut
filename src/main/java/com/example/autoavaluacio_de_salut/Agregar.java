@@ -6,6 +6,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -51,6 +52,9 @@ public class Agregar {
         Dato dato = new Dato(estadoDeAnimoValue, estadoFisicoValue, lleit, cereals, pasta, fruta, vegetals, llegums, aigua, alcohol, sucs, faseDelDiaValue);
 
         guardarObjeto(dato);
+        // Cerrar la ventana
+        Stage stage = (Stage) checkBoxLeche.getScene().getWindow();
+        stage.close();
     }
 
     public static void guardarObjeto(Dato dato) {
